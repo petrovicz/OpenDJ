@@ -1,35 +1,10 @@
-# opendj
+# OpenDJ
 
-## Project setup
+An open-source DJ software, built on web technologies like [Vue.js](https://vuejs.org/), [Vuetify](https://vuetifyjs.com/) and [Electron](https://electronjs.org/)
 
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
+## Contribute
 
 ```
-npm run serve
+git clone https://github.com/petrovicz/OpenDJ.git
+npm install && npm run serve
 ```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your tests
-
-```
-npm run test
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
