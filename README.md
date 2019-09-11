@@ -6,5 +6,13 @@ An open-source DJ software, built on web technologies like [Vue.js](https://vuej
 
 ```
 git clone https://github.com/petrovicz/OpenDJ.git
-npm install && npm run serve
+npm install && npm run electron:serve
 ```
+
+## Build your own version
+
+```
+npm run electron:build
+```
+
+You can find the artifacts in the **dist_electron** folder
