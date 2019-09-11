@@ -1,11 +1,14 @@
 'use strict';
 
+import path from 'path';
 import { app, protocol, BrowserWindow } from 'electron';
 import {
 	createProtocol,
 	installVueDevtools
 } from 'vue-cli-plugin-electron-builder/lib';
 const isDevelopment = process.env.NODE_ENV !== 'production';
+
+declare const __static: string;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -23,7 +26,8 @@ function createWindow() {
 		height: 600,
 		webPreferences: {
 			nodeIntegration: true
-		}
+		},
+		icon: path.join(__static, 'vinyl.png')
 	});
 
 	if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -42,8 +46,12 @@ function createWindow() {
 
 	win.webContents.on('did-finish-load', () => {
 		if (win != null) {
+			var title = 'OpenDJ';
+
 			var version = process.env.npm_package_version;
-			win.setTitle('OpenDJ - ' + version);
+			if (version != null) title += ' - ' + version;
+
+			win.setTitle(title);
 		}
 	});
 }

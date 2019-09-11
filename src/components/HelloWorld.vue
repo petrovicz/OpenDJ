@@ -2,7 +2,12 @@
 	<v-container>
 		<v-layout text-center wrap>
 			<v-flex xs12>
-				<div class="my-12"></div>
+				<v-img
+					:src="require('../assets/vinyl.png')"
+					class="my-3"
+					contain
+					height="200"
+				></v-img>
 			</v-flex>
 
 			<v-flex xs12 class="ma-10">
