@@ -1,5 +1,7 @@
 <template>
 	<v-app>
+		<SystemBar />
+
 		<v-content>
 			<router-view />
 		</v-content>
@@ -8,9 +10,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import SystemBar from '@/components/SystemBar.vue';
 
 export default Vue.extend({
 	name: 'App',
+	components: {
+		SystemBar
+	},
 	data: () => ({
 		//
 	})
@@ -18,7 +24,7 @@ export default Vue.extend({
 </script>
 
 <style>
-html {
-	overflow-y: hidden;
+::-webkit-scrollbar {
+	display: none;
 }
 </style>

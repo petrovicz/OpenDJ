@@ -27,7 +27,8 @@ function createWindow() {
 		webPreferences: {
 			nodeIntegration: true
 		},
-		icon: path.join(__static, 'vinyl.png')
+		icon: path.join(__static, 'vinyl.png'),
+		frame: false
 	});
 
 	if (process.env.WEBPACK_DEV_SERVER_URL) {
