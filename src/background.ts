@@ -39,6 +39,13 @@ function createWindow() {
 	win.on('closed', () => {
 		win = null;
 	});
+
+	win.webContents.on('did-finish-load', () => {
+		if (win != null) {
+			var version = process.env.npm_package_version;
+			win.setTitle('OpenDJ - ' + version);
+		}
+	});
 }
 
 // Quit when all windows are closed.
