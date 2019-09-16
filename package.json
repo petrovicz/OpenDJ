@@ -1,6 +1,6 @@
 {
 	"name": "opendj",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@mdi/font": "^3.6.95",
 		"core-js": "^2.6.5",
+		"howler": "^2.1.2",
 		"roboto-fontface": "*",
 		"vue": "^2.6.10",
 		"vue-class-component": "^7.0.2",

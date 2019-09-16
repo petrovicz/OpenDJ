@@ -1,7 +1,7 @@
 'use strict';
 
 import path from 'path';
-import { app, protocol, BrowserWindow } from 'electron';
+import { app, protocol, BrowserWindow, ipcMain, dialog } from 'electron';
 import {
 	createProtocol,
 	installVueDevtools
@@ -27,7 +27,8 @@ function createWindow() {
 		minWidth: 1024,
 		minHeight: 768,
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: true,
+			webSecurity: false
 		},
 		icon: path.join(__static, 'vinyl.png'),
 		frame: false
@@ -109,4 +110,26 @@ if (isDevelopment) {
 			app.quit();
 		});
 	}
+}
+
+ipcMain.on('loadAudio', event => {
+	openFolderDialog(event);
+});
+
+function openFolderDialog(event: Electron.IpcMainEvent) {
+	if (!win) return;
+
+	dialog
+		.showOpenDialog(win, {
+			properties: ['openFile'],
+			filters: [{ name: 'Audio', extensions: ['mp3', 'wav', 'flac'] }]
+		})
+		.then(result => {
+			if (result.filePaths) {
+				event.sender.send('loadAudioResponse', result.filePaths[0]);
+			}
+		})
+		.catch(err => {
+			console.log(err);
+		});
 }
