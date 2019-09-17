@@ -1,6 +1,21 @@
 {
 	"name": "opendj",
 	"version": "0.1.1",
+	"description": "An open-source DJ software, built on web technologies",
+	"keywords": [
+		"dj",
+		"performance",
+		"electron",
+		"vue",
+		"vuetify",
+		"opendj"
+	],
+	"author": {
+		"name": "Petrovicz",
+		"email": "benedek@petrovicz.com",
+		"url": "https://petrovicz.com"
+	},
+	"license": "Apache 2.0",
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
@@ -46,5 +61,9 @@
 		"vue-cli-plugin-vuetify": "^0.6.3",
 		"vue-template-compiler": "^2.6.10",
 		"vuetify-loader": "^1.2.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/petrovicz/OpenDJ.git"
 	}
 }
