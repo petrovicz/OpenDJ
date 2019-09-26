@@ -54,7 +54,7 @@
 		"eslint-plugin-vue": "^5.0.0",
 		"node-sass": "^4.9.0",
 		"prettier": "^1.18.2",
-		"sass": "^1.17.4",
+		"sass": "^1.22.12",
 		"sass-loader": "^7.1.0",
 		"typescript": "^3.6.3",
 		"vue-cli-plugin-electron-builder": "^1.4.0",
